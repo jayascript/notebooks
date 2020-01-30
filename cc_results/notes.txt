@@ -1,0 +1,16 @@
+Things to keep in mind:
+
+The datasets don't always end up with the same transformation. Some of the test sets have all the insurance companies in them while others only have one.
+This can contribute greatly to the accuracy of the model. If it only trains on the color red and you give it a test that asks about red, green, blue and
+purple, then it's going to do horribly because it has no idea what to do with those brand spankin' new colors!
+
+This is why the more data we have, the better. If I can give it an idea of what to expect, of all the possible values it might come across, then it has
+a better chance of spitting out the right answer when it sees something it hasn't seen before.
+
+There's a way to have it take unseen data into account, and this would mean going into the realm of reinforcement learning and artificial neural networks.
+Perhaps a supervised learning algorithm isn't the best approach when we don't have a clean dataset to go off of. We can't train our model on data we don't
+have and then expect it to perform well when we finally do get that.
+
+One potential way to solve this is to not do dummy variables the way I've been doing them and instead encode those features a different way. In this way,
+the algorithm will be a bit more flexible to values of features it hasn't seen before, instead of training itself on an attribute that might not exist in
+the test set.
